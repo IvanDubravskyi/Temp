@@ -8,10 +8,10 @@ class App extends React.Component {
     farengatesValue: ''
   };
   
-  gettingTemperature = async (e) => {
-    e.persist();
-    e.preventDefault();
-    const value = e.target.elements.temperature.value; 
+  gettingTemperature = async (event) => {
+    event.persist();
+    event.preventDefault();
+    const value = event.target.elements.temperature.value; 
     this.setState({
       farengatesValue: value * 1.8 + 32
     })
